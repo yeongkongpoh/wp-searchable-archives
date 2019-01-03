@@ -2,3 +2,12 @@
  * All of the CSS for your admin-specific functionality should be
  * included in this file.
  */
+.wpsa-cb-cont {
+    flex-wrap:wrap;
+    display:flex;
+}
+ .wpsa-cb-label {
+    width:33%;
+    display:block;
+    margin-bottom:.5rem;
+ }

@@ -15,7 +15,7 @@
  * @wordpress-plugin
  * Plugin Name:       Searchable Archives
  * Plugin URI:        searchable-archives
- * Description:       This is a short description of what the plugin does. It's displayed in the WordPress admin area.
+ * Description:       This plugin helps to create reference pages for post type and category/term archives. Wordpress will then be able to search within it's own search engine.
  * Version:           1.0.0
  * Author:            Gerald Yeong
  * Author URI:        https://github.com/yeongkongpoh
