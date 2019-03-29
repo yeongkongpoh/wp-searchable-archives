@@ -156,7 +156,11 @@ class Searchable_Archives {
 
 		$this->loader->add_action( 'admin_enqueue_scripts', $plugin_admin, 'enqueue_styles' );
         $this->loader->add_action( 'admin_enqueue_scripts', $plugin_admin, 'enqueue_scripts' );
-        $this->loader->add_action( 'admin_menu',  $plugin_admin, 'plugin_page_init' );        
+		$this->loader->add_action( 'admin_menu',  $plugin_admin, 'plugin_page_init' );       
+		$this->loader->add_action('admin_init', $plugin_admin, 'options_update');
+		$this->loader->add_action('updated_option', $plugin_admin, 'insert_phantom_pages', 10, 3);
+		$this->loader->add_action('save_post', $plugin_admin, 'page_meta_updated_hook', 10, 3);
+		$this->loader->add_action('edited_term', $plugin_admin, 'term_meta_updated_hook', 10, 3);
 
 	}
 
@@ -217,3 +221,4 @@ class Searchable_Archives {
 	}
 
 }
+?>
