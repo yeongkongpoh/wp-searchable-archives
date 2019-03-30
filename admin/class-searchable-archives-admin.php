@@ -192,7 +192,7 @@ class Searchable_Archives_Admin {
 		// only 1 taxonomy
 		$taxonomy = is_array( $taxonomy ) ? array_shift( $taxonomy ) : $taxonomy;
 		// get all direct decendants of the $parent
-		$terms = get_terms( $taxonomy, array( 'parent' => $parent, 'hide_empty' => true ) );
+		$terms = get_terms( $taxonomy, array( 'parent' => $parent, 'hide_empty' => false ) );
 		// prepare a new array.  these are the children of $parent
 		// we'll ultimately copy all the $terms into this new array, but only after they
 		// find their own children
