@@ -514,9 +514,9 @@ class Searchable_Archives_Admin {
 		<div class="wpsa-cb-cont">
 		<?php foreach ($pts as $pt) {  ?>
 				<div  class="wpsa-cb-label"> 
-					<label><input type="checkbox" name="<?php echo $this->plugin_name . '[chosen-post-types][]'; ?>" value="<? echo $pt; ?>" <? echo in_array($pt, $options) ? 'checked' : ''; ?>><?php echo $pt; ?></label>
+					<label><input type="checkbox" name="<?php echo $this->plugin_name . '[chosen-post-types][]'; ?>" value="<?php echo $pt; ?>" <?php echo in_array($pt, $options) ? 'checked' : ''; ?>><?php echo $pt; ?></label>
 
-					<? 
+					<?php 
 						$obj_tax = get_object_taxonomies( $pt ); 
 						foreach ($obj_tax as $ot) {
 							$obj_tax_terms = get_terms( array(

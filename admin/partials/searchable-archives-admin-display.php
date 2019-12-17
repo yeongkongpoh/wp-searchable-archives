@@ -13,7 +13,7 @@
  */
 ?>
 
-<? 
+<?php 
 function get_taxonomy_hierarchy( $taxonomy, $parent = 0 ) {
 	// only 1 taxonomy
 	$taxonomy = is_array( $taxonomy ) ? array_shift( $taxonomy ) : $taxonomy;
@@ -83,7 +83,7 @@ function get_taxonomy_hierarchy( $taxonomy, $parent = 0 ) {
 
 <!-- This file should primarily consist of HTML with a little bit of PHP. -->
 <form method="post" action="options.php" name="searchable-archives_options">
-       <? 
+       <?php 
        //$options = get_option($this->plugin_name); var_dump($options); 
        settings_fields($this->plugin_name); ?> 
     <p>Selecting a post type will generate phantom page(s) for the selected post type and it's related taxonomy's terms.</p>
@@ -92,7 +92,7 @@ function get_taxonomy_hierarchy( $taxonomy, $parent = 0 ) {
     <?php $this->get_post_types(); ?>
 
     <!-- <h2>Select Taxonomies</h2> -->
-    <? //$this->get_all_taxonomies(); ?>
+    <?php //$this->get_all_taxonomies(); ?>
 
-    <? submit_button( __( 'Save all changes', $this->plugin_name ), 'primary','submit', TRUE ); ?>
+    <?php submit_button( __( 'Save all changes', $this->plugin_name ), 'primary','submit', TRUE ); ?>
 </form>
